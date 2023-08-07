@@ -13,7 +13,7 @@ const Main = () => {
     const mainNavigation = () => {
       navigate("/mainNavigation");
     };
-  
+
     const copyEmail = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => { 
         e.preventDefault();
         const emailText = emailRef.current?.textContent || ""; 
@@ -48,7 +48,8 @@ const Main = () => {
                     <li>
                         <FontAwesomeIcon icon={faEnvelope} style={{color: "#19438a"}} />
                         <span className="sr-only">Email:</span>
-                        <a href="#" onClick={copyEmail} className="ml-1">dachenxuan@gmail.com</a>
+                        <a href="#" onClick={copyEmail} ref={emailRef} className="ml-1">dachenxuan@gmail.com</a>
+
                         {copied && <span style={{ marginLeft: "10px", color: "green" }}>Copied</span>}
                     </li>
                 </ul>
