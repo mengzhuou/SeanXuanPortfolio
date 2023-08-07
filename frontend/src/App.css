@@ -64,3 +64,11 @@ font-family: "Neucha", cursive;
 border-radius: 5%;
 font-weight: bold;
 }
+
+.hrLine { 
+	border: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #312c2c, rgba(0, 0, 0, 0));
+}
