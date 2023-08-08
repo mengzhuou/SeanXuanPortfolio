@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faEnvelope, faMapMarkerAlt, faUser } from '@fortawesome/free-solid-svg-icons'; 
+import { faCircle, faEnvelope, faMapMarkerAlt, faUser, faCopy } from '@fortawesome/free-solid-svg-icons'; 
 import { useRef, useState } from 'react';
 import wechat from "./XuanWechat.jpg";
 import instagram from "./XuanInstagram.jpg";
@@ -38,17 +38,17 @@ const Main = () => {
             </button>
           </div>
         </header>
-        <main className="p-4 border-4 container mx-auto py-8 flex-1">
+        <main className="p-4 mx-auto flex-1">
             <div className="flex items-center mt-8">
                 <FontAwesomeIcon icon={faCircle} style={{color: "#88adec"}} />
                 <div className="bg-white-500 font-bold tracking-wide text-black p-4">Personal Info</div>
             </div>
             <div className="hrLine"></div>
-            <div className="flex mb-10 p-4 container flex-1 flex justify-center">
+            <div className="flex mb-10 p-4 container flex justify-center">
                 <div className="w-100 h-100 ml-20 mr-20">
                     <img src={mainPic} alt="mainPic"/>
                 </div>
-                <div className="flex-col items-center mt-8">
+                <div className="flex-col items-center">
                     <div className="flex">
                         <img src={wechatIcon} alt="wechat" className="w-11 h-8 mt-3.5"/>
                         <img src={instagramIcon} alt="instagram" className="w-11 ml-4 mt-2"/>
@@ -65,8 +65,11 @@ const Main = () => {
                     <div className="mt-1 text-lg">
                         <FontAwesomeIcon icon={faEnvelope} style={{color: "#19438a"}} />
                         <span className="sr-only">Email:</span>
-                        <a href="#" onClick={copyEmail} ref={emailRef} className="ml-1">dachenxuan@gmail.com</a>
+                        <span onClick={copyEmail} ref={emailRef} className="ml-1">
+                            dachenxuan@gmail.com
+                        </span>
                         {copied && <span style={{ marginLeft: "10px", color: "green" }}>Copied</span>}
+                        <FontAwesomeIcon icon={faCopy} style={{color: "#19438a"}} className="ml-3"/>
                     </div>
                 </div>
             </div>
