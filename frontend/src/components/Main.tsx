@@ -76,10 +76,20 @@ const Main = () => {
                         <div className="qrPopup_container" style={{display: showWechatPopup ? 'block' : 'none'}}>
                             <div className="qrPopup_content">
                                 <img src={wechatQrCode} alt="wechat" />
-                                <span className="qr_close top-0 right-0" onClick={wechatClosePopup}>&times;</span>
+                                <span className="qr_close top-0 right-0 cursor-pointer" onClick={wechatClosePopup}>&times;</span>
                             </div>
                         </div>
-                        <img src={instagramIcon} alt="instagram" className="w-11 ml-4 mt-2"/>
+
+                        <span onClick={insOpenPopup} className="cursor-pointer">
+                            <img src={instagramIcon} alt="instagram" className="w-11 ml-4 mt-2"/>
+                        </span>
+
+                        <div className="qrPopup_container" style={{display: showInsPopup ? 'block' : 'none'}}>
+                            <div className="qrPopup_content">
+                                <img src={instagramQrCode} alt="wechat" />
+                                <span className="qr_close top-0 right-0 cursor-pointer" onClick={insClosePopup}>&times;</span>
+                            </div>
+                        </div>
                     </div>
                     <div className="mt-3 text-lg">
                         <FontAwesomeIcon icon={faUser} style={{color: "#19438a"}} />
