@@ -2,8 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faEnvelope, faMapMarkerAlt, faUser, faCopy } from '@fortawesome/free-solid-svg-icons'; 
 import { useRef, useState } from 'react';
-import wechat from "./XuanWechat.jpg";
-import instagram from "./XuanInstagram.jpg";
+import wechatQrCode from "./XuanWechat.jpg";
+import instagramQrCode from "./XuanInstagram.jpg";
 import wechatIcon from "./wechat_icon.png";
 import instagramIcon from "./instagram_icon.png";
 import mainPic from "./MainPic.jpg";
@@ -13,6 +13,9 @@ const Main = () => {
     const navigate = useNavigate();
     const [copied, setCopied] = useState(false);
     const emailRef = useRef<HTMLAnchorElement | null>(null);
+    const [showWechatPopup, setShowWechatPopup] = useState(false);
+    const [showInsPopup, setShowInsPopup] = useState(false);
+
   
     const mainNavigation = () => {
       navigate("/mainNavigation");
@@ -24,6 +27,22 @@ const Main = () => {
         navigator.clipboard.writeText(emailText);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
+    };
+
+    const wechatOpenPopup = () => {
+        setShowWechatPopup(true);
+    }
+
+    const wechatClosePopup = () => {
+        setShowWechatPopup(false);
+    };
+
+    const insOpenPopup = () => {
+        setShowInsPopup(true);
+    }
+
+    const insClosePopup = () => {
+        setShowInsPopup(false);
     };
   
     return (
@@ -50,7 +69,16 @@ const Main = () => {
                 </div>
                 <div className="flex-col items-center">
                     <div className="flex">
-                        <img src={wechatIcon} alt="wechat" className="w-11 h-8 mt-3.5"/>
+                        <span onClick={wechatOpenPopup} className="cursor-pointer">
+                            <img src={wechatIcon} alt="wechat" className="w-11 h-8 mt-3.5"/>
+                        </span>
+
+                        <div className="qrPopup_container" style={{display: showWechatPopup ? 'block' : 'none'}}>
+                            <div className="qrPopup_content">
+                                <img src={wechatQrCode} alt="wechat" />
+                                <span className="qr_close top-0 right-0" onClick={wechatClosePopup}>&times;</span>
+                            </div>
+                        </div>
                         <img src={instagramIcon} alt="instagram" className="w-11 ml-4 mt-2"/>
                     </div>
                     <div className="mt-3 text-lg">
