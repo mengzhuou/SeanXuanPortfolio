@@ -65,11 +65,13 @@ const Main = () => {
                     <div className="mt-1 text-lg">
                         <FontAwesomeIcon icon={faEnvelope} style={{color: "#19438a"}} />
                         <span className="sr-only">Email:</span>
-                        <span onClick={copyEmail} ref={emailRef} className="ml-1">
+                        <span ref={emailRef} className="ml-1">
                             dachenxuan@gmail.com
                         </span>
-                        {copied && <span style={{ marginLeft: "10px", color: "green" }}>Copied</span>}
-                        <FontAwesomeIcon icon={faCopy} style={{color: "#19438a"}} className="ml-3"/>
+                        <span onClick={copyEmail} className="cursor-pointer ml-2">
+                            <FontAwesomeIcon icon={faCopy} style={{color: "#19438a"}} className="ml-3"/>
+                        </span>
+                        <span className={`copyAlert ${copied ? 'animate' : ''} ml-2.5 text-green-500`}>Copied</span>
                     </div>
                 </div>
             </div>
