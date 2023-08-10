@@ -7,6 +7,7 @@ import instagramQrCode from "./XuanInstagram.jpg";
 import wechatIcon from "./wechat_icon.png";
 import instagramIcon from "./instagram_icon.png";
 import mainPic from "./MainPic.jpg";
+import TopNavBar from './TopNavBar'; 
 
 
 const Main = () => {
@@ -15,14 +16,6 @@ const Main = () => {
     const emailRef = useRef<HTMLAnchorElement | null>(null);
     const [showWechatPopup, setShowWechatPopup] = useState(false);
     const [showInsPopup, setShowInsPopup] = useState(false);
-
-  
-    const mainNav = () => {
-      navigate("/");
-    };
-    const galleryNav = () => {
-        navigate("/Gallery");
-      };
 
     const copyEmail = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => { 
         e.preventDefault();
@@ -50,22 +43,7 @@ const Main = () => {
   
     return (
       <div className="min-h-screen flex flex-col">
-        <header>
-          <div className="topnav">
-            <button
-              className="topnavButton"
-              onClick={mainNav}
-            >
-              首页
-            </button>
-            <button
-              className="topnavButton"
-              onClick={galleryNav}
-            >
-              作品展示
-            </button>
-          </div>
-        </header>
+        <TopNavBar/>
         <main className="p-4 mx-auto flex-1">
             <div className="flex items-center mt-8">
                 <FontAwesomeIcon icon={faCircle} style={{color: "#88adec"}} />

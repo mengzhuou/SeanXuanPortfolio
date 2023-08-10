@@ -1,30 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import nail1 from "./nail1.jpg";
+import nail2 from "./nail2.jpg";
+import nail3 from "./nail3.jpg";
+import TopNavBar from './TopNavBar'; 
 
 const Gallery = () => {
-    const navigate = useNavigate();
-
-    const mainNavigation = () => {
-      navigate("/");
-    };
-  
     return (
       <div className="min-h-screen flex flex-col">
-        <header>
-          <div className="topnav">
-            <button
-              className="topnavButton"
-              onClick={mainNavigation}
-            >
-              首页
-            </button>
-            <button
-              className="topnavButton"
-              onClick={mainNavigation}
-            >
-              作品展示
-            </button>
-          </div>
-        </header>
+        <TopNavBar/>
+        <main>
+            <img src={nail1} alt="nail1"/>
+
+        </main>
         
       </div>
     );
