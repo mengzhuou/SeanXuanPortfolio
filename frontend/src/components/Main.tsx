@@ -17,9 +17,12 @@ const Main = () => {
     const [showInsPopup, setShowInsPopup] = useState(false);
 
   
-    const mainNavigation = () => {
-      navigate("/mainNavigation");
+    const mainNav = () => {
+      navigate("/");
     };
+    const galleryNav = () => {
+        navigate("/Gallery");
+      };
 
     const copyEmail = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => { 
         e.preventDefault();
@@ -51,9 +54,15 @@ const Main = () => {
           <div className="topnav">
             <button
               className="topnavButton"
-              onClick={mainNavigation}
+              onClick={mainNav}
             >
               首页
+            </button>
+            <button
+              className="topnavButton"
+              onClick={galleryNav}
+            >
+              作品展示
             </button>
           </div>
         </header>
@@ -93,7 +102,7 @@ const Main = () => {
                     </div>
                     <div className="mt-3 text-lg">
                         <FontAwesomeIcon icon={faUser} style={{color: "#19438a"}} />
-                        <span className="sr-only">Name:</span> Jerry Xuan
+                        <span className="sr-only">Name:</span> Dachen Xuan (Jerry)
 
                     </div>
                     <div className="mt-1 text-lg">
