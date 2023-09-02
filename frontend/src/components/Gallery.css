@@ -46,8 +46,14 @@ html, body {
     overflow: hidden;
 }
   
-  .backgroundBody {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+.backgroundBody {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  .carousel-slide {
+    margin-top: 40%;
   }
+}

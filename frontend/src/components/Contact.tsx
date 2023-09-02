@@ -6,9 +6,10 @@ import instagramQrCode from "./contactImages/XuanInstagram.jpg";
 import wechatIcon from "./contactImages/wechat_icon.png";
 import instagramIcon from "./contactImages/instagram_icon.png";
 import TopNavBar from './TopNavBar'; 
-import "./Main.css";
+import "./Contact.css";
 
-const Main = () => {
+
+const Contact = () => {
     const [copied, setCopied] = useState(false);
     const emailRef = useRef<HTMLAnchorElement | null>(null);
     const [showWechatPopup, setShowWechatPopup] = useState(false);
@@ -41,6 +42,7 @@ const Main = () => {
     return (
       <div className="min-h-screen flex flex-col">
         <TopNavBar/>
+        <h1 className=''>Welcome</h1>
         <main className="p-4 mx-auto flex-1">
             <div className="flex items-center mt-8">
                 <FontAwesomeIcon icon={faCircle} style={{color: "#88adec"}} />
@@ -101,4 +103,4 @@ const Main = () => {
   };
   
 
-export default Main;
+export default Contact;
