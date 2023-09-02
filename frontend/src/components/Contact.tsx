@@ -42,15 +42,11 @@ const Contact = () => {
     return (
       <div className="min-h-screen flex flex-col">
         <TopNavBar/>
-        <h1 className=''>Welcome</h1>
-        <main className="p-4 mx-auto flex-1">
-            <div className="flex items-center mt-8">
-                <FontAwesomeIcon icon={faCircle} style={{color: "#88adec"}} />
-                <div className="bg-white-500 font-bold tracking-wide text-black p-4">Contact</div>
-            </div>
+        <main className="mx-2 mt-10">
+            <h1 className='welcomeStyle'>Contact us</h1>
             <div className="hrLine"></div>
-            <div className="flex mb-10 p-4 container flex justify-center">
-                <div className="flex-col items-center ml-20">
+            <div className="flex p-5 container flex justify-center">
+                <div className="flex-col items-center mb-12">
                     <div className="flex">
                         <span onClick={wechatOpenPopup} className="cursor-pointer">
                             <img src={wechatIcon} alt="wechat" className="w-11 h-8 mt-3.5"/>
@@ -76,18 +72,24 @@ const Contact = () => {
                     </div>
                     <div className="mt-3 text-lg">
                         <FontAwesomeIcon icon={faUser} style={{color: "#19438a"}} />
-                        <span className="sr-only">Name:</span> Dachen Xuan (Jerry)
+                        <span className="sr-only">Name:</span> 
+                        <span className='ml-1'>
+                            Dachen Xuan (Jerry)
+                        </span>
 
                     </div>
-                    <div className="mt-1 text-lg">
+                    <div className="mt-1 text-lg tracking-wider">
                         <FontAwesomeIcon icon={faMapMarkerAlt} style={{color: "#19438a"}} />
-                        <span className="sr-only">Location:</span> Dallas, TX
+                        <span className="sr-only">Location:</span> 
+                        <span className='ml-2'>
+                            Dallas, TX
+                        </span>
                     </div>
                     <div className="mt-1 text-lg emailStyle">
                         <FontAwesomeIcon icon={faEnvelope} style={{color: "#19438a"}} />
                         <span className="sr-only">Email:</span>
-                        <span ref={emailRef}>
-                            dachenxuan@gmail.com
+                        <span ref={emailRef} className='ml-1'>
+                            Dachenxuan@gmail.com
                         </span>
                         <span onClick={copyEmail} className="cursor-pointer ml-2">
                             <FontAwesomeIcon icon={faCopy} style={{color: "#19438a"}} className="ml-3"/>

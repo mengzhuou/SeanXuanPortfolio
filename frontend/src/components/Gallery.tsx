@@ -11,6 +11,8 @@ import backgroundImg from "./otherImages/background.jpg"
 const Gallery = () => {
   return (
     <div>
+      <h1 className='welcomeStyle'>Welcome</h1>
+      <h1 className='welcomeStyle'>Check out some of our recent work.</h1>
       <TopNavBar />
       <div className="backgroundBody">
         <img className="gallery-background" src={backgroundImg} alt="backgroundImg"/>

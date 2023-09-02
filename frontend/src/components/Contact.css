@@ -18,9 +18,9 @@
 }
 
 @keyframes disappear {
-30%  { opacity: 1; }
-60%  { opacity: 1; }
-100% { opacity: 0; }
+  30%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .qrPopup_container {
@@ -56,5 +56,28 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 1px;
+}
+
+.welcomeStyle{
+  white-space: pre-wrap;
+  transition-timing-function: ease;
+  transition-duration: 0.9s;
+  transition-delay: 0.222222s;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 50px;
+  font-family: monospace;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 500px) {
+  .qrPopup_content {
+    width: 70%;
+  }
+
+  .qr_close{
+    margin-right: 0px;
+    background: transparent;  
+    margin-top: -10px;
+  }
 }
