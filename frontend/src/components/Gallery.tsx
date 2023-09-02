@@ -21,6 +21,8 @@ const Gallery = () => {
           autoplay={true}
           autoplayInterval={5000}
           className="carousel-container"
+          // slidesToShow={1}
+          slideWidth="300px"
         >
           <div className="carousel-slide">
             <img src={nail1} alt="nail1" />

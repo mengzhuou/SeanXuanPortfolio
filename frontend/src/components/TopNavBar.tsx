@@ -10,6 +10,10 @@ const TopNavBar  = () => {
     const galleryNav = () => {
         navigate("/Gallery");
     };
+
+    const contactNav = () => {
+      navigate("/Contact");
+  };
   
     return (
       <div className="topnav">
@@ -24,6 +28,12 @@ const TopNavBar  = () => {
           onClick={galleryNav}
         >
           作品展示
+        </button>
+        <button
+          className="topnavButton"
+          onClick={contactNav}
+        >
+          联系方式
         </button>
       </div>
     );
