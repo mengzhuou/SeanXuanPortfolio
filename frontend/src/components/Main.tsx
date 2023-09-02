@@ -1,17 +1,15 @@
-import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faEnvelope, faMapMarkerAlt, faUser, faCopy } from '@fortawesome/free-solid-svg-icons'; 
 import { useRef, useState } from 'react';
-import wechatQrCode from "./XuanWechat.jpg";
-import instagramQrCode from "./XuanInstagram.jpg";
-import wechatIcon from "./wechat_icon.png";
-import instagramIcon from "./instagram_icon.png";
-import mainPic from "./MainPic.jpg";
+import wechatQrCode from "./contactImages/XuanWechat.jpg";
+import instagramQrCode from "./contactImages/XuanInstagram.jpg";
+import wechatIcon from "./contactImages/wechat_icon.png";
+import instagramIcon from "./contactImages/instagram_icon.png";
+import mainPic from "./otherImages/MainPic.jpg";
 import TopNavBar from './TopNavBar'; 
 
 
 const Main = () => {
-    const navigate = useNavigate();
     const [copied, setCopied] = useState(false);
     const emailRef = useRef<HTMLAnchorElement | null>(null);
     const [showWechatPopup, setShowWechatPopup] = useState(false);
