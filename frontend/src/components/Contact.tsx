@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faEnvelope, faMapMarkerAlt, faUser, faCopy } from '@fortawesome/free-solid-svg-icons'; 
+import { faEnvelope, faMapMarkerAlt, faUser, faCopy } from '@fortawesome/free-solid-svg-icons'; 
 import { useRef, useState } from 'react';
 import wechatQrCode from "./contactImages/XuanWechat.jpg";
 import instagramQrCode from "./contactImages/XuanInstagram.jpg";
@@ -7,6 +7,7 @@ import wechatIcon from "./contactImages/wechat_icon.png";
 import instagramIcon from "./contactImages/instagram_icon.png";
 import TopNavBar from './TopNavBar'; 
 import "./Contact.css";
+import backgroundImg from "./otherImages/background.jpg"
 
 
 const Contact = () => {
@@ -42,6 +43,9 @@ const Contact = () => {
     return (
       <div className="min-h-screen flex flex-col">
         <TopNavBar/>
+        <div className="backgroundBody">
+            <img className="gallery-background" src={backgroundImg} alt="backgroundImg"/>
+        </div>
         <main className="mx-2 mt-10">
             <h1 className='TitleTextStyle'>Contact us</h1>
             <div className="hrLine"></div>
