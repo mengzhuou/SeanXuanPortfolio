@@ -1,0 +1,47 @@
+.mainContainer{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 15px; 
+    height: 100%;
+}
+
+.MainTitleTextStyle{
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.9s;
+    transition-delay: 0.222222s;
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 4px;
+    margin-top: 17%;
+    font-size: 60px;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%; /* Adjust the margin as needed */
+}
+
+.AppointmentButton{
+    color: black;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 5%;
+    text-decoration: none;
+    font-size: 30px;
+    background-color: #d6e4ff;
+    cursor: pointer;
+    font-family: "Neucha", cursive;
+    font-weight: bold;
+    border: 3px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.AppointmentButton:hover {
+  background-color: rgb(45, 33, 33);
+  color: white;
+}

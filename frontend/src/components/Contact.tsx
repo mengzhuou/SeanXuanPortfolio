@@ -43,7 +43,7 @@ const Contact = () => {
       <div className="min-h-screen flex flex-col">
         <TopNavBar/>
         <main className="mx-2 mt-10">
-            <h1 className='welcomeStyle'>Contact us</h1>
+            <h1 className='TitleTextStyle'>Contact us</h1>
             <div className="hrLine"></div>
             <div className="flex p-5 container flex justify-center">
                 <div className="flex-col items-center mb-12">

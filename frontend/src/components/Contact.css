@@ -48,7 +48,7 @@
   font-size: 35px;
   font-weight: bold;
   position: absolute;
-  background: #ffffff;
+  background: transparent;  
   margin-right: 20px;
 }
 
@@ -58,7 +58,7 @@
   text-overflow: ellipsis;
 }
 
-.welcomeStyle{
+.TitleTextStyle{
   white-space: pre-wrap;
   transition-timing-function: ease;
   transition-duration: 0.9s;
@@ -77,7 +77,6 @@
 
   .qr_close{
     margin-right: 0px;
-    background: transparent;  
     margin-top: -10px;
   }
 }
