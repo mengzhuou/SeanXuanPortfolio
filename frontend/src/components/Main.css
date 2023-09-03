@@ -63,11 +63,11 @@
     .AppointmentButton {
       width: 50%;
       font-size: 15px;
+      font-family: monospace;
     }
 
     .MainTitleTextStyle{
-        margin-top: 20%;
-        font-family: auto;
+        margin: 20% 2% 0 2%;
         font-size: 30px;
     }
 }
