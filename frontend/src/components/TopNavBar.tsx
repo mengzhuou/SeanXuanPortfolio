@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import instagramIcon from "./contactImages/instagram_icon.png";
 
 const TopNavBar  = () => {
   const navigate = useNavigate();
@@ -13,6 +14,10 @@ const TopNavBar  = () => {
 
   const contactNav = () => {
     navigate("/Contact");
+  };
+
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/xiaotanzai/", "_blank");
   };
 
   return (
@@ -35,6 +40,12 @@ const TopNavBar  = () => {
       >
         联系方式
       </button>
+      <img
+        src={instagramIcon}
+        alt="instagram"
+        className="w-11 ml-4 mt-2 cursor-pointer"
+        onClick={openInstagram}
+      />
     </div>
   );
 };

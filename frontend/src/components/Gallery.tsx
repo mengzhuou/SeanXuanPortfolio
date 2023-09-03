@@ -9,34 +9,32 @@ import "./Gallery.css";
 import backgroundImg from "./otherImages/background.jpg"
 
 const Gallery = () => {
-  const [slidesToShow, setSlidesToShow] = useState(3); // Default to 3 slides on larger screens
+  const [slidesToShow, setSlidesToShow] = useState(3); 
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setSlidesToShow(1); // Show only 1 slide
+        setSlidesToShow(1);
       } else {
-        setSlidesToShow(3); // Show 3 slides on larger screens
+        setSlidesToShow(3);
       }
     };
-
     handleResize();
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div>
-      <h1 className='TitleTextStyle'>Welcome</h1>
-      <h1 className='TitleTextStyle'>Check out some of our recent work.</h1>
+    <div className="min-h-screen flex flex-col">
       <TopNavBar />
-      <div className="backgroundBody">
-        <img className="gallery-background" src={backgroundImg} alt="backgroundImg"/>
-      </div>
+      <main className="mx-2">
+        <h1 className='TitleTextStyle'>Check out some of our recent work</h1>
+        <div className="backgroundBody">
+          <img className="gallery-background" src={backgroundImg} alt="backgroundImg"/>
+        </div>
+      </main>
       <main className="p-4 mx-auto flex-1">
         <Carousel
           wrapAround={true}
