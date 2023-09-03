@@ -30,7 +30,7 @@ const Gallery = () => {
     <div className="min-h-screen flex flex-col">
       <TopNavBar />
       <main className="mx-2">
-        <h1 className='TitleTextStyle'>Check out some of our recent work</h1>
+        <h1 className='GalleryTitleTextStyle'>Check out some of our recent work</h1>
         <div className="backgroundBody">
           <img className="gallery-background" src={backgroundImg} alt="backgroundImg"/>
         </div>

@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh; /* Use viewport height to make sure it covers the entire screen */
+    height: 100vh; 
     position: relative;
     overflow: hidden;
 }
@@ -57,4 +57,17 @@
 .AppointmentButton:hover {
   background-color: rgb(45, 33, 33);
   color: white;
+}
+
+@media (max-width: 500px) {
+    .AppointmentButton {
+      width: 50%;
+      font-size: 15px;
+    }
+
+    .MainTitleTextStyle{
+        margin-top: 20%;
+        font-family: auto;
+        font-size: 30px;
+    }
 }

@@ -45,3 +45,23 @@
   display: flex;
   flex-direction: column;
 }
+
+.GalleryTitleTextStyle{
+  white-space: pre-wrap;
+  transition-timing-function: ease;
+  transition-duration: 0.9s;
+  transition-delay: 0.222222s;
+  margin-top: 10%;
+  text-align: center;
+  font-size: 50px;
+  font-family: monospace;
+  letter-spacing: 4px;
+}
+
+
+@media (max-width: 500px) {
+  .GalleryTitleTextStyle {
+    margin-top: 30%;
+    font-size: 20px;
+  }
+}
