@@ -35,11 +35,29 @@ html, body {
   margin-right: 10px;
   text-decoration: none;
   font-size: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Neucha", cursive;
+  border-radius: 5%;
+  font-weight: bold;
+}
+
+.appointmentButtonOnTop{
+  float: left;
+  padding: 10px 10px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
   background-color: #ddd;
   cursor: pointer;
   font-family: "Neucha", cursive;
   border-radius: 5%;
   font-weight: bold;
+}
+
+.appointmentButtonOnTop:hover {
+  background-color: rgb(45, 33, 33);
+  color: white;
 }
 
 .errImg {

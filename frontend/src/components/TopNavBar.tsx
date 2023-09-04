@@ -20,6 +20,10 @@ const TopNavBar  = () => {
     window.open("https://www.instagram.com/xiaotanzai/", "_blank");
   };
 
+  const errorNav = () => {
+    navigate("/NotFound");
+  };
+
   return (
     <div className="topnav">
       <button
@@ -46,6 +50,9 @@ const TopNavBar  = () => {
         className="w-11 ml-4 mt-2 cursor-pointer"
         onClick={openInstagram}
       />
+      <button className='appointmentButtonOnTop' onClick={errorNav}>
+        BOOK
+      </button>
     </div>
   );
 };
