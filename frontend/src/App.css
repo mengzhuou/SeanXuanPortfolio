@@ -28,23 +28,29 @@ html, body {
 }
 
 .topnavButton {
-  float: left;
+  padding: 10px 10px;
   color: black;
   text-align: center;
-  padding: 10px 10px;
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 15px;
   background-color: transparent;
   cursor: pointer;
   font-family: "Neucha", cursive;
   border-radius: 5%;
+  text-decoration: none; 
+
+  &.active {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
+.topnavButton:hover {
+  text-decoration: underline;
   font-weight: bold;
 }
 
 .appointmentButtonOnTop{
   float: left;
-  padding: 10px 10px;
+  padding: 5px 10px;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -53,6 +59,7 @@ html, body {
   font-family: "Neucha", cursive;
   border-radius: 5%;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .appointmentButtonOnTop:hover {

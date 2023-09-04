@@ -1,15 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import instagramIcon from "./contactImages/instagram_icon.png";
 
-const TopNavBar  = () => {
+const TopNavBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const mainNav = () => {
     navigate("/");
   };
 
   const galleryNav = () => {
-      navigate("/Gallery");
+    navigate("/Gallery");
   };
 
   const contactNav = () => {
@@ -27,19 +28,19 @@ const TopNavBar  = () => {
   return (
     <div className="topnav">
       <button
-        className="topnavButton"
+        className={`topnavButton ${location.pathname === "/" ? "active" : ""}`}
         onClick={mainNav}
       >
         Main
       </button>
       <button
-        className="topnavButton"
+        className={`topnavButton ${location.pathname === "/Gallery" ? "active" : ""}`}
         onClick={galleryNav}
       >
         Gallery
       </button>
       <button
-        className="topnavButton"
+        className={`topnavButton ${location.pathname === "/Contact" ? "active" : ""}`}
         onClick={contactNav}
       >
         Contact
@@ -47,15 +48,14 @@ const TopNavBar  = () => {
       <img
         src={instagramIcon}
         alt="instagram"
-        className="w-11 ml-4 mt-2 cursor-pointer"
+        className="w-11 ml-4 cursor-pointer"
         onClick={openInstagram}
       />
-      <button className='appointmentButtonOnTop' onClick={errorNav}>
+      <button className="appointmentButtonOnTop" onClick={errorNav}>
         BOOK
       </button>
     </div>
   );
 };
-  
 
-export default TopNavBar ;
+export default TopNavBar;
