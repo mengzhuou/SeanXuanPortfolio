@@ -8,12 +8,12 @@
 
         if (path === "/") {
           window.location.href = "/Main";
-        }
-        if (path === "/Gallery") {
+        } else if (path === "/Gallery") {
           window.location.href = "/Gallery";
-        }
-        if (path === "/Contact") {
+        } else if (path === "/Contact") {
           window.location.href = "/Contact";
+        } else {
+          window.location.href = "/";
         }
       }
       handleRouting();
