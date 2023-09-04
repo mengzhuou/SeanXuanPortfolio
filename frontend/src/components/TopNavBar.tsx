@@ -26,19 +26,19 @@ const TopNavBar  = () => {
         className="topnavButton"
         onClick={mainNav}
       >
-        首页
+        Main
       </button>
       <button
         className="topnavButton"
         onClick={galleryNav}
       >
-        作品展示
+        Gallery
       </button>
       <button
         className="topnavButton"
         onClick={contactNav}
       >
-        联系方式
+        Contact
       </button>
       <img
         src={instagramIcon}
