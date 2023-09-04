@@ -1,9 +1,11 @@
-import errImg from "./otherImages/404.png"
+import errImg from "./otherImages/404.png";
+import TopNavBar from './TopNavBar'; 
 
 const NotFound = () => {
   return (
     <div>
-      <img src={errImg} alt="Not Found"/>
+      <TopNavBar/>
+      <img className="errImg" src={errImg} alt="Not Found"/>
     </div>
   );
 };

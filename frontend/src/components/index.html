@@ -6,13 +6,7 @@
       function handleRouting() {
         const path = window.location.pathname;
 
-        if (path === "/") {
-          window.location.href = "/Main";
-        } else if (path === "/Gallery") {
-          window.location.href = "/Gallery";
-        } else if (path === "/Contact") {
-          window.location.href = "/Contact";
-        } else {
+        if (!["/", "/Gallery", "/Contact"].includes(path)) {
           window.location.href = "/NotFound";
         }
       }

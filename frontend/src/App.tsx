@@ -14,7 +14,7 @@ class App extends React.Component<any,any>{
           <Route path="/" element={<Main/>}/>
           <Route path="/Gallery" element={<Gallery/>}/>
           <Route path="/Contact" element={<Contact/>}/>
-          <Route path="/NotFound" element={<NotFound/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </Router>
     );
