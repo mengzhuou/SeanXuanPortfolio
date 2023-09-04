@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./components/Main";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
 import React from "react";
 
 class App extends React.Component<any,any>{
@@ -13,6 +14,7 @@ class App extends React.Component<any,any>{
           <Route path="/" element={<Main/>}/>
           <Route path="/Gallery" element={<Gallery/>}/>
           <Route path="/Contact" element={<Contact/>}/>
+          <Route path="/NotFound" element={<NotFound/>}/>
         </Routes>
       </Router>
     );
