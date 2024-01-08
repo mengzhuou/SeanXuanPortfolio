@@ -4,6 +4,8 @@ import nail1 from "./nailImages/nail1.jpg";
 import nail2 from "./nailImages/nail2.jpg";
 import nail3 from "./nailImages/nail3.jpg";
 import nail4 from "./nailImages/nail4.jpg";
+import nail5 from "./nailImages/nail5.jpg";
+// import nail6 from "./nailImages/nail6.jpg";
 import TopNavBar from "./TopNavBar";
 import "./Gallery.css";
 import backgroundImg from "./otherImages/background.jpg"
@@ -27,7 +29,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <TopNavBar />
       <main className="mx-2">
         <h1 className='GalleryTitleTextStyle'>Check out some of our recent work</h1>
@@ -35,7 +37,7 @@ const Gallery = () => {
           <img className="gallery-background" src={backgroundImg} alt="backgroundImg"/>
         </div>
       </main>
-      <main className="p-4 mx-auto flex-1">
+      <main className="flex-1 p-4 mx-auto">
         <Carousel
           wrapAround={true}
           autoplay={true}
@@ -55,6 +57,12 @@ const Gallery = () => {
           <div className="carousel-slide">
             <img src={nail4} alt="nail4" />
           </div>
+          <div className="carousel-slide">
+            <img src={nail5} alt="nail5" />
+          </div>
+          {/* <div className="carousel-slide">
+            <img src={nail6} alt="nail6" />
+          </div> */}
         </Carousel>
       </main>
     </div>

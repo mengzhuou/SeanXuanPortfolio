@@ -48,7 +48,7 @@ const TopNavBar = () => {
       <img
         src={instagramIcon}
         alt="instagram"
-        className="w-11 ml-4 cursor-pointer"
+        className="ml-4 cursor-pointer w-11"
         onClick={openInstagram}
       />
       <button className="appointmentButtonOnTop" onClick={errorNav}>
